@@ -27,22 +27,19 @@
     });
     app.canvasComponent = ng.core.Component({
         selector:'my-img',
-        template:'<canvas id="myCanvas" width="600" height="600">您的浏览器暂不支持canvas</canvas>'
+        template:'<canvas id="myCanvas" width="1600" height="1000">您的浏览器暂不支持canvas</canvas>'
     }).Class({
         constructor:function () {
-            var img =new Image();
-            img.src = "../../images/log.png";
-            console.log(img)
             setTimeout(function () {
                 var canvas = new Particles({
                     canvasId:'myCanvas',
-                    imgUrl:'../../images/isux.png',
-                    cols:100,
-                    rows:100,
-                    startX: 700,
-                    startY: 600,
-                    imgX: 500,
-                    imgY: 130,
+                    imgUrl:'../../images/test.jpg',
+                    cols:1024,
+                    rows:828,
+                    startX: 600,
+                    startY:  600,
+                    imgX: 0,
+                    imgY: 0,
                     delay: 100,
                     duration: 2000,
                     interval: 6,
