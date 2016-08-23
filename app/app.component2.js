@@ -30,57 +30,28 @@
         template:'<canvas id="myCanvas" width="600" height="600">您的浏览器暂不支持canvas</canvas>'
     }).Class({
         constructor:function () {
+            var img =new Image();
+            img.src = "../../images/log.png";
+            console.log(img)
             setTimeout(function () {
-                var canvas = document.getElementById('myCanvas');
-                console.log(canvas);
-                var ctx = null;
-                if(canvas.getContext){
-                    ctx = canvas.getContext('2d');
-                }
-                var image = new Image();
-                // image.onload = function () {
-                //     ctx.drawImage(image,100,100);
-                // }
-                image.src = '../images/log.png';
-                var imageData = ctx.getImageData(300,200,300,200);
-                console.log(imageData)
-                var parts = [];
-                function calculate() {
-                    var cols,rows = 100;
-                    var s_width = parseInt(image.w/cols);
-                    var s_height = parseInt(image.h/rows);
-                    var pos = 0;
-                    var par_x,par_y;
-                    var data =image.imageData.data;
-                    for(var i = 0;i<=cols;i++){
-                        for(var j = 1;j<=rows;j++){
-                            pos = [(j*s_height-1)*image.w+(i*s_width-1)]*4;
-                            if(data[pos]>250){
-                                var part = {
-                                    x:image.x + i*s_width+(Math.random()-0.5)*20,
-                                    j:image.y + j*s_height+(Math.random()-0.5)*20,
-                                    fillStlye:'#006eff'
-                                }
-                                parts.push(part)
-                            }
-                        }
-                    }
-                    console.log(parts)
-                }
-                function draw() {
-                    ctx.clearRect(0,0,canvas.w,canvas.h);
-                    var len = parts.length,curr_parts = null;
-
-                    for(var i = 0;i<len;i++){
-                        curr_parts = parts[i];
-                        ctx.fillStyle = curr_parts.fillStyle;
-                        ctx.fillRect(curr_parts.x,curr_parts.y,1,1)
-                    }
-                }
-                calculate();
-                draw();
+                var canvas = new Particles({
+                    canvasId:'myCanvas',
+                    imgUrl:'../../images/isux.png',
+                    cols:100,
+                    rows:100,
+                    startX: 700,
+                    startY: 600,
+                    imgX: 500,
+                    imgY: 130,
+                    delay: 100,
+                    duration: 2000,
+                    interval: 6,
+                    fillStyle: 'rgba(26,145,211,1)',
+                    particleOffset: 2,
+                    ease: 'easeInOutBack'
+                });
+                canvas.animate();
             },300)
-
         }
     })
 })(window.app || (window.app = {}));
