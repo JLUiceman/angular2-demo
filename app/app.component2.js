@@ -24,5 +24,17 @@
         constructor:function () {
             this.arr = [1,2,3,4,5]
         }
+    });
+    app.canvasComponent = ng.core.Component({
+        selector:'my-img',
+        template:'<canvas id="myCanvas" width="600" height="600">您的浏览器暂不支持canvas</canvas>'
+    }).Class({
+        constructor:function () {
+            var canvas = document.getElementById('myCanvas');
+            var ctx = null;
+            if(canvas.getContext){
+                ctx = canvas.getContext('2d');
+            }
+        }
     })
 })(window.app || (window.app = {}));
