@@ -4,12 +4,15 @@
   app.AppComponent =
     ng.core.Component({
       selector: 'my-app',
-      template: '<h1>{{title}}</h1>'
+      templateUrl:'../views/header.html'
     })
     .Class({
       constructor: function() {
-      	this.title = 'hero';
-      	// this.hero = '伊利丹怒风'
+          function Hero(title,name) {
+              this.title = title;
+              this.name = name;
+          }
+           this.hero = new Hero('名字','伊利丹怒风')
       }
     });
 })(window.app || (window.app = {}));
