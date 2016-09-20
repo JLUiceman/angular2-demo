@@ -1,11 +1,16 @@
 (function(app) {
   app.AppModule =
     ng.core.NgModule({
-      imports: [ ng.platformBrowser.BrowserModule],
-      declarations: [ app.AppComponent ,app.AppComponent2,app.liComponent,app.canvasComponent],
-      bootstrap: [ app.AppComponent ,app.AppComponent2,app.liComponent,app.canvasComponent]
+      imports: [ng.platformBrowser.BrowserModule,ng.forms.FormsModule,ng.router.RouterModule],
+        declarations: [ app.headerComponent],
+        bootstrap: [ app.headerComponent]
     })
     .Class({
-      constructor: function() {}
+      constructor: function() {
+            console.log(ng)
+      }
     });
+    var routes = [{
+        // path:'route1',component
+    }]
 })(window.app || (window.app = {}));

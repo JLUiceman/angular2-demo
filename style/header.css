@@ -1,0 +1,15 @@
+.header-wrap {
+    width: 100%;
+    height: 100px;
+    background-color: #00b3ee;
+    padding-right: 60px;
+    position: relative;
+}
+.header-wrap>h2 {
+
+}
+.header-wrap>button {
+    /*position: absolute;*/
+    /*right: 0px;*/
+    /*top:20px;*/
+}

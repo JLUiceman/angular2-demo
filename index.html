@@ -1,7 +1,10 @@
 <html>
   <head>
     <title>Angular 2 QuickStart JS</title>
+    <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/header.css">
 
     <!-- 1. Load libraries -->
     <!-- IE required polyfill -->
@@ -16,8 +19,12 @@
     <script src="node_modules/@angular/compiler/bundles/compiler.umd.js"></script>
     <script src="node_modules/@angular/platform-browser/bundles/platform-browser.umd.js"></script>
     <script src="node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script>
+    <script src="node_modules/@angular/forms/bundles/forms.umd.js"></script>
+    <script src="node_modules/@angular/router/bundles/router.umd.js"></script>
+    <script src="node_modules/ui-router-ng2/_bundles/ui-router-ng2.js"></script>
 
     <!-- 2. Load our 'modules' -->
+    <script src='app/header.component.js'></script>
     <script src='app/app.component.js'></script>
         <script src='app/app.component2.js'></script>
     <script src='app/app.module.js'></script>
@@ -29,10 +36,9 @@
 
   <!-- 3. Display the application -->
   <body>
-    <my-app class = "test">Loading...</my-app>
-    <your-app>testing...</your-app>
-  <other-app></other-app>
-  <my-img></my-img>
+  <app-header>
+
+  </app-header>
   </body>
 
 </html>

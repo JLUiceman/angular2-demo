@@ -19,10 +19,13 @@
     });
     app.liComponent = ng.core.Component({
         selector:'other-app',
-        template:'<ul><li *ngFor="let item of arr;let i = index">{{item}}</li></ul>'
+        template:'<ul><li *ngFor="let item of arr;let i = index" (click)="select(item)">{{item}}</li></ul><input type="text" [(ngModel)]="showValue">'
     }).Class({
         constructor:function () {
             this.arr = [1,2,3,4,5]
+            this.select = function (id) {
+                this.showValue = id
+            }
         }
     });
     app.canvasComponent = ng.core.Component({
