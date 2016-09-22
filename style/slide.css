@@ -1,0 +1,15 @@
+app-slide {
+    position: fixed;
+    top:100px;
+    left: 0px;
+    width: 120px;
+}
+.slide-ul {
+
+}
+.slide-ul>li {
+    list-style: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-align: center;
+}

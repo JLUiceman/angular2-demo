@@ -1,0 +1,6 @@
+
+<ul class="slide-ul">
+    <li *ngFor="let item of slide;" (click)="fn.active(item)" [@liState] = item.state>
+        {{item.title}}
+    </li>
+</ul>

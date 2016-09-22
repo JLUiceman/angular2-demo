@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style/common.css">
     <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/slide.css">
 
     <!-- 1. Load libraries -->
     <!-- IE required polyfill -->
@@ -24,12 +25,14 @@
     <script src="node_modules/ui-router-ng2/_bundles/ui-router-ng2.js"></script>
 
     <!-- 2. Load our 'modules' -->
+    <script src='app/lib/echarts.js'></script>
     <script src='app/header.component.js'></script>
+    <script src='app/slide.component.js'></script>
     <script src='app/app.component.js'></script>
         <script src='app/app.component2.js'></script>
+    <script src='app/lib/canvas.js'></script>
     <script src='app/app.module.js'></script>
     <script src='app/main.js'></script>
-    <script src='app/lib/canvas.js'></script>
     <!--<script src='static/test.js'></script>-->
 
   </head>
@@ -39,6 +42,9 @@
   <app-header>
 
   </app-header>
+  <app-slide>
+
+  </app-slide>
   </body>
 
 </html>
